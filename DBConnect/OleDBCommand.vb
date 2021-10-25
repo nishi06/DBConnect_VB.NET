@@ -5,7 +5,13 @@ Public Class OleDBCommand
     Private _sqlConnect As String '接続文字を格納します。
 
     ''' <summary>
-    ''' コンストラクターで接続文字を指定します。
+    ''' 接続文字を指定せずインスタンス化を行います。
+    ''' </summary>
+    Public Sub New()
+    End Sub
+
+    ''' <summary>
+    ''' 接続文字を指定してインスタンス化を行います。
     ''' </summary>
     ''' <param name="sqlConnect">接続文字</param>
     ''' <remarks></remarks>
@@ -58,7 +64,7 @@ Public Class OleDBCommand
     ''' <param name="sqlCommands">実行するSQL文(UPDATE又はDELETE文)</param>
     ''' <returns>実行件数</returns>
     ''' <remarks></remarks>
-    Public Function OleDbExcuteNonQuery(sqlCommands As List(Of String)) As Boolean
+    Public Function OleDbExcuteNonQuery(ParamArray sqlCommands As String()) As Boolean
 
         Dim cn As OleDb.OleDbConnection = New OleDb.OleDbConnection(_sqlConnect)
         Dim OleTran As OleDb.OleDbTransaction
