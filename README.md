@@ -1,7 +1,7 @@
 # DBConnect_VB.NET
 
-# 概要
- DBConnect は OLE DB APIを用いてデータベースの操作を行うためのクラスライブラリです。
+# OleDBCommand クラス
+ OleDBCommand は OLE DB APIを用いてデータベースの操作を行うクラスです。
 
 # コンストラクター
 ## OleDBCommand()
